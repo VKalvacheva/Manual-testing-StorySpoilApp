@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "6d91c417-ed23-4e32-94f1-09524902382f",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37482355"
+	},
+	"item": [
+		{
+			"name": "User create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"test\",\r\n    \"firstName\": \"test\",\r\n    \"midName\": \"test\",\r\n    \"lastName\": \"test\",\r\n    \"email\": \"test1@testing.com\",\r\n    \"password\": \"123456789\",\r\n    \"rePassword\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d5wfqm7y6yb3q.cloudfront.net/api/user/create",
+					"protocol": "https",
+					"host": [
+						"d5wfqm7y6yb3q",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User authentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"string\",\r\n    \"password\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d5wfqm7y6yb3q.cloudfront.net/api/user/authentication",
+					"protocol": "https",
+					"host": [
+						"d5wfqm7y6yb3q",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"user",
+						"authentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of created spoilers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIxN2ZjOWVjYS1hZGNkLTRkNjItOTM4Ny0zNzY4MDAxODc5MjUiLCJpYXQiOiIwOC8xNy8yMDI0IDA4OjU4OjE1IiwiVXNlcklkIjoiNWRiMThmODYtOWViMy00MTcyLWI0OTAtMDhkYzYwYjRhZmE2IiwiRW1haWwiOiJ1c2VyQGV4YW1wbGUuY29tIiwiVXNlck5hbWUiOiJzdHJpbmciLCJleHAiOjE3MjM5MDY2OTUsImlzcyI6IlN0b3J5U3BvaWxfQXBwX1NvZnRVbmkiLCJhdWQiOiJTdG9yeVNwb2lsX1dlYkFQSV9Tb2Z0VW5pIn0.NS5m9PM2dzdeN3XP8hYsKzr1dvYFP5G5svreySkmPTQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://d5wfqm7y6yb3q.cloudfront.net/api/story/all",
+					"protocol": "https",
+					"host": [
+						"d5wfqm7y6yb3q",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"story",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Spoilers search by keyword",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIxN2ZjOWVjYS1hZGNkLTRkNjItOTM4Ny0zNzY4MDAxODc5MjUiLCJpYXQiOiIwOC8xNy8yMDI0IDA4OjU4OjE1IiwiVXNlcklkIjoiNWRiMThmODYtOWViMy00MTcyLWI0OTAtMDhkYzYwYjRhZmE2IiwiRW1haWwiOiJ1c2VyQGV4YW1wbGUuY29tIiwiVXNlck5hbWUiOiJzdHJpbmciLCJleHAiOjE3MjM5MDY2OTUsImlzcyI6IlN0b3J5U3BvaWxfQXBwX1NvZnRVbmkiLCJhdWQiOiJTdG9yeVNwb2lsX1dlYkFQSV9Tb2Z0VW5pIn0.NS5m9PM2dzdeN3XP8hYsKzr1dvYFP5G5svreySkmPTQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d5wfqm7y6yb3q.cloudfront.net/api/story/search?keyword=storyTitle",
+					"protocol": "https",
+					"host": [
+						"d5wfqm7y6yb3q",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"story",
+						"search"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "storyTitle"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new spoiler",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIxN2ZjOWVjYS1hZGNkLTRkNjItOTM4Ny0zNzY4MDAxODc5MjUiLCJpYXQiOiIwOC8xNy8yMDI0IDA4OjU4OjE1IiwiVXNlcklkIjoiNWRiMThmODYtOWViMy00MTcyLWI0OTAtMDhkYzYwYjRhZmE2IiwiRW1haWwiOiJ1c2VyQGV4YW1wbGUuY29tIiwiVXNlck5hbWUiOiJzdHJpbmciLCJleHAiOjE3MjM5MDY2OTUsImlzcyI6IlN0b3J5U3BvaWxfQXBwX1NvZnRVbmkiLCJhdWQiOiJTdG9yeVNwb2lsX1dlYkFQSV9Tb2Z0VW5pIn0.NS5m9PM2dzdeN3XP8hYsKzr1dvYFP5G5svreySkmPTQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"test\",\r\n    \"description\": \"test\",\r\n    \"url\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d5wfqm7y6yb3q.cloudfront.net/api/story/create",
+					"protocol": "https",
+					"host": [
+						"d5wfqm7y6yb3q",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"story",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Spoiler editing",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIxN2ZjOWVjYS1hZGNkLTRkNjItOTM4Ny0zNzY4MDAxODc5MjUiLCJpYXQiOiIwOC8xNy8yMDI0IDA4OjU4OjE1IiwiVXNlcklkIjoiNWRiMThmODYtOWViMy00MTcyLWI0OTAtMDhkYzYwYjRhZmE2IiwiRW1haWwiOiJ1c2VyQGV4YW1wbGUuY29tIiwiVXNlck5hbWUiOiJzdHJpbmciLCJleHAiOjE3MjM5MDY2OTUsImlzcyI6IlN0b3J5U3BvaWxfQXBwX1NvZnRVbmkiLCJhdWQiOiJTdG9yeVNwb2lsX1dlYkFQSV9Tb2Z0VW5pIn0.NS5m9PM2dzdeN3XP8hYsKzr1dvYFP5G5svreySkmPTQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n       \"title\": \"123\",\r\n    \"description\": \"123\",\r\n    \"url\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d5wfqm7y6yb3q.cloudfront.net/api/story/edit/1aac2348-9e0f-4af7-2ea3-08dcbe82dad4",
+					"protocol": "https",
+					"host": [
+						"d5wfqm7y6yb3q",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"story",
+						"edit",
+						"1aac2348-9e0f-4af7-2ea3-08dcbe82dad4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete spoiler",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIxN2ZjOWVjYS1hZGNkLTRkNjItOTM4Ny0zNzY4MDAxODc5MjUiLCJpYXQiOiIwOC8xNy8yMDI0IDA4OjU4OjE1IiwiVXNlcklkIjoiNWRiMThmODYtOWViMy00MTcyLWI0OTAtMDhkYzYwYjRhZmE2IiwiRW1haWwiOiJ1c2VyQGV4YW1wbGUuY29tIiwiVXNlck5hbWUiOiJzdHJpbmciLCJleHAiOjE3MjM5MDY2OTUsImlzcyI6IlN0b3J5U3BvaWxfQXBwX1NvZnRVbmkiLCJhdWQiOiJTdG9yeVNwb2lsX1dlYkFQSV9Tb2Z0VW5pIn0.NS5m9PM2dzdeN3XP8hYsKzr1dvYFP5G5svreySkmPTQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://d5wfqm7y6yb3q.cloudfront.net/api/story/delete/1aac2348-9e0f-4af7-2ea3-08dcbe82dad4",
+					"protocol": "https",
+					"host": [
+						"d5wfqm7y6yb3q",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"story",
+						"delete",
+						"1aac2348-9e0f-4af7-2ea3-08dcbe82dad4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
